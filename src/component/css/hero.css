@@ -6,7 +6,7 @@
 
 .hero-background {
     width: 100%;
-    height: 600px;
+    height: 700px;
     position: absolute;
     top: 0;
     left: 0;
@@ -31,7 +31,7 @@
     background: rgba(84, 0, 101, 0.8);
     animation: moveBlob 6s infinite ease-in-out;
     z-index: -1;
-    top: 20%;
+    top: 30%;
     left: 30%;
 }
 
@@ -41,8 +41,8 @@
     background: rgba(255, 223, 0, 0.5);
     animation: moveBlob2 8s infinite ease-in-out;
     z-index: -1;
-    top: 50%;
-    left: 60%;
+    top: 60%;
+    left: 65%;
 }
 
 @keyframes moveBlob {
@@ -109,7 +109,7 @@
 
 .hero-container {
     width: 100%;
-    height: 600px;
+    height: 700px;
     background: rgba(0, 0, 0, 0.3);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(5px);
@@ -140,23 +140,54 @@
     text-align: center; 
     border-radius: 30px;
     border: 3px solid#ffc30d;
-    color: wheat;
+    color: rgb(255, 255, 255);
 }
-.razor{
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk33R_OGLXDc9sv2kNLN2Gm29mnCiAU4YWrg&s');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 200px;  
-    height: 200px; 
-    z-index: 5; 
+
+.razor {
     position: absolute;
     top: 40%;
     left: 10%;
-    transform: translate(-30%, -40%); 
+    transform: translate(-30%, -40%);
+    width: 200px;
+    height: 200px;
+    perspective: 1000px; /* Adds perspective for 3D rotation */
+    z-index: 5;
+}
+
+/* Front and back of the coin */
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden; /* Hides the back when facing away */
+    transition: transform 0.6s ease-in-out;
     box-shadow: 5px 0px 30px black;
 }
+
+/* Front side */
+.front {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk33R_OGLXDc9sv2kNLN2Gm29mnCiAU4YWrg&s');
+}
+
+/* Back side */
+.back {
+    background-image: url('https://pbs.twimg.com/profile_images/1831944849248985088/iDqvLE7f_400x400.png'); 
+    transform: rotateY(180deg); 
+}
+
+/* Rotate the coin on hover */
+.razor:hover .front {
+    transform: rotateY(180deg);
+}
+
+.razor:hover .back {
+    transform: rotateY(360deg);
+}
+
+
 .wallets{
     background-image: url('../../assets/cripson.png');
     background-position: center;
@@ -206,5 +237,137 @@
     to {
         opacity: 1;
         transform: translateY(0); 
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-wrapper {
+        height: 400px;
+    }
+
+    .hero-background {
+        height: 400px;
+    }
+
+    .hero-background::before {
+        width: 200px;
+        height: 200px;
+        top: 20%;
+        left: 20%;
+    }
+
+    .hero-background::after {
+        width: 250px;
+        height: 250px;
+        top: 50%;
+        left: 60%;
+    }
+
+    .hero-container {
+        height: 400px;
+        backdrop-filter: blur(8px);
+    }
+
+    .hero-app-card {
+        padding: 10px;
+        width: 90%;
+        height: 250px;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+    }
+
+    .razor {
+        width: 80px;
+        height: 80px;
+        top: 50%;
+        left: 10%;
+        transform: translate(-10%, -10%);
+    }
+
+    .wallets {
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        left: 70%;
+        transform: translate(-10%, 200%);
+        border-radius: 10px;
+    }
+
+    .text {
+        padding-top: 20px;
+    }
+
+    .text h1 {
+        font-size: 32px;
+        line-height: 1.1;
+        letter-spacing: 1px;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+
+    @keyframes moveBlob {
+        0%, 100% {
+            transform: 
+                translate(0, 0) 
+                scale(1)
+                rotate(0deg)
+                skew(0deg, 0deg);
+        }
+        25% {
+            transform: 
+                translate(20px, -10px) 
+                scale(1.1) 
+                rotate(15deg)
+                skew(5deg, 3deg);
+        }
+        50% {
+            transform: 
+                translate(-15px, 10px) 
+                scale(1.2) 
+                rotate(-10deg)
+                skew(-3deg, 5deg);
+        }
+        75% {
+            transform: 
+                translate(-25px, -25px) 
+                scale(1.1) 
+                rotate(20deg)
+                skew(7deg, -4deg);
+        }
+    }
+
+    @keyframes moveBlob2 {
+        0%, 100% {
+            transform: 
+                translate(0, 0) 
+                scale(1)
+                rotate(0deg)
+                skew(0deg, 0deg);
+        }
+        25% {
+            transform: 
+                translate(-20px, 25px) 
+                scale(1.2) 
+                rotate(-15deg)
+                skew(-5deg, 6deg);
+        }
+        50% {
+            transform: 
+                translate(15px, -15px) 
+                scale(1.1) 
+                rotate(10deg)
+                skew(4deg, -3deg);
+        }
+        75% {
+            transform: 
+                translate(25px, 10px) 
+                scale(1.3) 
+                rotate(-20deg)
+                skew(6deg, 5deg);
+        }
     }
 }

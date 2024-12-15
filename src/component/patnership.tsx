@@ -7,6 +7,7 @@ const PartnershipLogos = () => {
     { name: "Future Systems", logo: "https://pbs.twimg.com/profile_images/1854641330221195277/R3edkAmv_400x400.jpg" },
     { name: "Enterprise Solutions", logo: "https://miro.medium.com/v2/resize:fit:2400/1*1QABIdoaCqI1kKyJoJiObA.png" },
     { name: "Digital Frontier", logo: "https://pbs.twimg.com/profile_images/1789681376809062401/OZwCKU3g_400x400.jpg" }
+    
   ];
 
   return (

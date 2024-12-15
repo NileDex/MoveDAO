@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import './css/hero.css';
+import { useState, useEffect } from "react";
+import "./css/hero.css";
 
 const Hero = () => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
-  const words = ['Move DAO', 'Governance ON-Chain'];
+  const words = ["Move DAO", "Governance ON-Chain"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   useEffect(() => {
@@ -48,9 +48,7 @@ const Hero = () => {
             {currentWordIndex === 0 ? (
               <>
                 {text}
-                {text === 'Move DAO' && (
-                  <span className="highlight"> ⚡</span>
-                )}
+                {text === "Move DAO" && <span className="highlight"> ⚡</span>}
               </>
             ) : (
               text
@@ -58,10 +56,13 @@ const Hero = () => {
           </h1>
         </div>
       </div>
-      <div className="hero-app-card">
+      <div className="hero-app-card"></div>
+      <div className="razor">
+        <div className="front"></div>
+        <div className="back"></div>
       </div>
-      <div className='razor'></div>
-      <div className='wallets'></div>
+
+      <div className="wallets"></div>
     </div>
   );
 };
