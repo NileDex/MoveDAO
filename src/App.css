@@ -1,12 +1,12 @@
-* {
+body {
   overflow: auto; /* Keep content scrollable */
 }
 
-*::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none; /* Hide scrollbar in WebKit browsers (Chrome, Safari) */
 }
 
-* {
+body{
   -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
   scrollbar-width: none; /* Hide scrollbar for Firefox */
 }

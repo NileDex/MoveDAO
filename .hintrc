@@ -14,7 +14,8 @@
       {
         "ignore": [
           "backdrop-filter",
-          "scrollbar-width"
+          "scrollbar-width",
+          "scrollbar-width: none"
         ]
       }
     ]

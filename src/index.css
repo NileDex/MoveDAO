@@ -1,10 +1,70 @@
 @import url("https://fonts.googleapis.com/css2?family=Hubballi&display=swap");
-*{
+
+* {
   font-family: "Hubballi", sans-serif;
+  box-sizing: border-box;
 }
-body{
+
+/* General reset */
+body {
   margin: 0;
   padding: 0;
   background: black;
-  
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Adding liquid blobs to the background */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 221, 0, 0.386) 0%, rgba(255, 221, 0, 0.173) 70%);
+  border-radius: 50%;
+  filter: blur(150px);
+  animation: blobMove 10s infinite alternate;
+  z-index: -1;
+  will-change: transform;
+}
+
+body::after {
+  background: radial-gradient(circle, rgba(128, 0, 255, 1) 0%, rgba(128, 0, 255, 0.3) 70%);
+  animation-delay: 5s;
+}
+
+/* Blob positions */
+body::before {
+  top: 40%;
+  left: 15%;
+}
+
+body::after {
+  bottom: -30%;
+  right: 10%;
+}
+
+/* Blob animation */
+@keyframes blobMove {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.5) translate(50px, -50px);
+  }
+}
+
+/* Mobile optimization */
+@media screen and (max-width: 768px) {
+  body::before, body::after {
+    width: 250px;
+    height: 250px;
+  }
 }
