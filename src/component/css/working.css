@@ -5,6 +5,7 @@
     color: white;
     padding: 50px 30px;
     justify-content: space-evenly;
+    margin-top: 30px;
 }
 
 .working-wrapper {
@@ -28,7 +29,16 @@
 .chain img {
     width: 300px;
     height: auto;
+    opacity: 50%;
+    transition: all 0.5s ease-in-out; /* Smooth transition for hover effects */
+    transform: scale(1); /* Default scale */
 }
+
+.chain img:hover {
+    opacity: 100%; /* Full opacity on hover */
+    transform: scale(1.1); /* Slightly enlarges the image */
+   }
+
 
 /* Responsive adjustments for mobile screens */
 @media (max-width: 768px) {
