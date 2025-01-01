@@ -254,11 +254,11 @@
 
 @media (max-width: 768px) {
     .hero-wrapper {
-        height: 300px;
+        height: 400px;
     }
 
     .hero-background {
-        height: 300px;
+        height: 400px;
     }
 
     .hero-background::before {
@@ -276,7 +276,7 @@
     }
 
     .hero-container {
-        height: 300px;
+        height: 400px;
         backdrop-filter: blur(8px);
     }
 
@@ -303,7 +303,7 @@
     .razor {
         width: 80px;
         height: 80px;
-        top: 30%;
+        top: 40%;
         left: 5%;
         transform: translate(-10%, -10%);
     }
@@ -329,6 +329,7 @@
 
     .text p {
         font-size: 16px;
+        margin-top: 30px;
     }
 
     @keyframes moveBlob {
