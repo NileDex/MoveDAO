@@ -1,31 +1,5 @@
-
-// import './App.css'
-// import Footer from './component/footer'
-// import Header from './component/header'
-// import Hero from './component/hero'
-// import Offer from './component/offer'
-// import PartnershipLogos from './component/patnership'
-// import Team from './component/team'
-// import Working from './component/working'
-
-// function App() {
-
-
-//   return (
-//     <>
-//       <Header/>
-//       <Hero/>
-//       <PartnershipLogos/>
-//       <Working/>
-//       <Offer/>
-//       <Team/>
-//       <Footer/>
-//     </>
-//   )
-// }
-
-// export default App
 import './App.css';
+import { useRef } from 'react';
 import Footer from './component/footer';
 import Header from './component/header';
 import Hero from './component/hero';
@@ -33,44 +7,38 @@ import Offer from './component/offer';
 import PartnershipLogos from './component/patnership';
 import Team from './component/team';
 import Working from './component/working';
-import { useRef } from 'react';
 
 function App() {
-  // Create refs for each section
-  const heroRef = useRef<HTMLDivElement>(null);
-  const partnershipRef = useRef<HTMLDivElement>(null);
-  const workingRef = useRef<HTMLDivElement>(null);
-  const offerRef = useRef<HTMLDivElement>(null);
-  const teamRef = useRef<HTMLDivElement>(null);
+  const homeRef = useRef<HTMLDivElement>(null); // Add type
+  const workingRef = useRef<HTMLDivElement>(null); // Add type
+  const teamRef = useRef<HTMLDivElement>(null); // Add type
+  const tokenomicsRef = useRef<HTMLDivElement>(null); // Add type
 
-  // Function to scroll to a specific section
-  const scrollToSection = (section: string) => {
-    const sectionRefs: { [key: string]: React.RefObject<HTMLDivElement> } = {
-      hero: heroRef,
-      partnership: partnershipRef,
-      working: workingRef,
-      offer: offerRef,
-      team: teamRef,
-    };
-
-    sectionRefs[section]?.current?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <>
-      {/* Pass the scrollToSection function to Header */}
-      <Header scrollToSection={scrollToSection} />
-      <div ref={heroRef}>
+      <Header
+        onScroll={(section) => {
+          if (section === 'home') scrollToSection(homeRef);
+          if (section === 'working') scrollToSection(workingRef);
+          if (section === 'team') scrollToSection(teamRef);
+          if (section === 'tokenomics') scrollToSection(tokenomicsRef);
+        }}
+      />
+      <div ref={homeRef}>
         <Hero />
-      </div>
-      <div ref={partnershipRef}>
         <PartnershipLogos />
       </div>
       <div ref={workingRef}>
         <Working />
       </div>
-      <div ref={offerRef}>
-        <Offer />
+      <div ref={tokenomicsRef}>
+        <Offer /> {/* Assuming Tokenomics is here */}
       </div>
       <div ref={teamRef}>
         <Team />
