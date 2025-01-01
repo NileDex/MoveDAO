@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ onScroll }) => {
         <p onClick={() => onScroll('tokenomics')}>Tokenomics</p>
       </div>
       <div className="headerspecial">
-        <p className="prior" onClick={() => onScroll('tokenomics')}>
+        <p className="prior" >
           Launch Dapp
         </p>
       </div>
@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ onScroll }) => {
         <p onClick={() => onScroll('working')}>Working</p>
         <p onClick={() => onScroll('team')}>Team</p>
         <p onClick={() => onScroll('tokenomics')}>Tokenomics</p>
-        <p className="prior" onClick={() => onScroll('tokenomics')}>
+        <p className="prior">
           Launch Dapp
         </p>
       </div>

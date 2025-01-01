@@ -19,7 +19,7 @@
 .working-wrapper p {
     font-size: 20px;
     text-align: justify;
-    line-height: 1.5em;
+    line-height: 1.5rem;
 }
 
 .chain {
@@ -51,10 +51,13 @@
 
     .working-wrapper {
         width: 100%;
+        padding: 0 10px;
+        line-height: none;
     }
 
     .working-wrapper p {
         font-size: 16px;
+        
     }
 
     .chain {

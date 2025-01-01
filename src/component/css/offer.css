@@ -82,7 +82,7 @@
   /* Mobile Responsiveness */
   @media screen and (max-width: 768px) {
     .offer-container {
-      padding: 2rem 1rem;
+      padding: 1rem 1rem;
     }
   
     .offer-title {
@@ -97,7 +97,7 @@
     .offer-card {
       width: 100%;
       max-width: 100%;
-      margin: 10px 0;
+      margin: 0px 0;
     }
   }
   
