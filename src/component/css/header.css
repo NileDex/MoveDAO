@@ -108,10 +108,23 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
         color: var(--font-color);
-       
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
+        border-radius: 0 0 15px 15px;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        transition: transform 1s ease-in-out, background-color 1s ease-in-out, opacity 1s ease-in-out;
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw; /* Ensure it covers the entire viewport width */
+        margin: 0; /* Remove any margins */
+        box-sizing: border-box; /* Include padding and border in width calculation */
     }
+    
     .logo img {
         width: 30px;
         margin: 0;
