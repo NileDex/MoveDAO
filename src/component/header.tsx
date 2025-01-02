@@ -15,19 +15,23 @@ const Header: React.FC<HeaderProps> = ({ onScroll }) => {
 
   return (
     <div className="header">
-      <div className="logo">
-        <img src={favicon} alt="logo" />
+      <div className="logo-section">
+        <div className="logo">
+          <img src={favicon} alt="logo" />
+        </div>
+        <div className="logo-info">
+          <p className="governance-text">Governance</p>
+          <div className="testnet-block">Testnet</div>
+        </div>
       </div>
       <div className="headinfob">
-        <p onClick={() => onScroll('home')}>Home</p>
-        <p onClick={() => onScroll('working')}>Working</p>
-        <p onClick={() => onScroll('team')}>Team</p>
-        <p onClick={() => onScroll('tokenomics')}>Tokenomics</p>
+        <p onClick={() => onScroll("home")}>Home</p>
+        <p onClick={() => onScroll("working")}>Working</p>
+        <p onClick={() => onScroll("team")}>Team</p>
+        <p onClick={() => onScroll("tokenomics")}>Tokenomics</p>
       </div>
       <div className="headerspecial">
-        <p className="prior" >
-          Launch Dapp
-        </p>
+        <p className="prior">Launch Dapp</p>
       </div>
       <button
         className="menu-toggle"
@@ -41,13 +45,11 @@ const Header: React.FC<HeaderProps> = ({ onScroll }) => {
         id="mobile-menu"
         className={`headinfo ${isHeadinfoVisible ? "visible" : ""}`}
       >
-        <p onClick={() => onScroll('home')}>Home</p>
-        <p onClick={() => onScroll('working')}>Working</p>
-        <p onClick={() => onScroll('team')}>Team</p>
-        <p onClick={() => onScroll('tokenomics')}>Tokenomics</p>
-        <p className="prior">
-          Launch Dapp
-        </p>
+        <p onClick={() => onScroll("home")}>Home</p>
+        <p onClick={() => onScroll("working")}>Working</p>
+        <p onClick={() => onScroll("team")}>Team</p>
+        <p onClick={() => onScroll("tokenomics")}>Tokenomics</p>
+        <p className="prior">Launch Dapp</p>
       </div>
     </div>
   );
