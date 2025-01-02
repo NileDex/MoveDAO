@@ -1,0 +1,109 @@
+.orbital-menu {
+    position: relative;
+    width: 20rem; /* Base size for desktops */
+    height: 20rem;
+    border-radius: 50%;
+  }
+  
+  .orbital-menu .center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .orbital-menu .center-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .orbital-menu .ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #4a5568; /* Gray-700 */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .orbital-menu .orbit-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+  
+  .orbital-menu .orbit-item:hover {
+    transform: scale(1.2); /* Hover effect */
+  }
+  
+  .orbital-menu .orbit-item img {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  /* Tablet View */
+  @media (max-width: 768px) {
+    .orbital-menu {
+      width: 15rem; /* Shrink size for tablets */
+      height: 15rem;
+    }
+  
+    .orbital-menu .center-logo {
+      width: 3rem;
+      height: 3rem;
+    }
+  
+    .orbital-menu .ring {
+      border: 0.8px solid #4a5568; /* Smaller border */
+    }
+  
+    .orbital-menu .orbit-item {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  
+  /* Phone View */
+  @media (max-width: 480px) {
+    .orbital-menu {
+      transform: scale(0.7); /* Scale down the entire orbital menu */
+      margin-top: 2em; /* Adjust margin for better positioning */
+    }
+  
+    .orbital-menu .center-logo {
+      width: 2.5rem; /* Smaller center logo */
+      height: 2.5rem;
+    }
+  
+    .orbital-menu .ring {
+      border: 0.5px solid #4a5568; /* Smaller border for rings */
+    }
+  
+    .orbital-menu .orbit-item {
+      width: 1.5rem; /* Smaller orbit items */
+      height: 1.5rem;
+    }
+  
+    .orbital-menu .orbit-item img {
+      width: 100%; /* Ensure images fit the resized container */
+      height: 100%;
+    }
+  }
+  

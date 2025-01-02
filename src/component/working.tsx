@@ -1,5 +1,6 @@
 import "./css/working.css";
-import chain from '../assets/chain.png'
+
+import OrbitalMenu from "./OrbitalMenu";
 const Working = () => {
   return (
     <div className="Working-container">
@@ -15,7 +16,7 @@ const Working = () => {
         </p>
       </div>
       <div className="chain">
-        <img src={chain} alt="" />
+        <OrbitalMenu/>
       </div>
     </div>
   );

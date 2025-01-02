@@ -18,6 +18,7 @@
           "scrollbar-width: none"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }
