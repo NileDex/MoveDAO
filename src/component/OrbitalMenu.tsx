@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './CSS/OrbitalMenu.css';
+import './css/OrbitalMenu.css';
 
 const OrbitalMenu = () => {
   const [rotation, setRotation] = useState(0);
