@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ onScroll }) => {
         <p onClick={() => onScroll("tokenomics")}>Tokenomics</p>
       </div>
       <div className="headerspecial">
-       <a className="prior" href="https://vote-dao-roan.vercel.app/" target="_blank" rel="noopener noreferrer">
+       <a className="prior" href="https://vote-dao-app.vercel.app/" target="_blank" rel="noopener noreferrer">
     Launch Dapp
   </a>
       </div>
@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ onScroll }) => {
         <p onClick={() => onScroll("team")}>Team</p>
         <p onClick={() => onScroll("tokenomics")}>Tokenomics</p>
         
-  <a className="prior" href="https://vote-dao-roan.vercel.app/" target="_blank" rel="noopener noreferrer">
+  <a className="prior" href="https://vote-dao-app.vercel.app/" target="_blank" rel="noopener noreferrer">
     Launch Dapp
   </a>
 
