@@ -31,7 +31,9 @@ const Header: React.FC<HeaderProps> = ({ onScroll }) => {
         <p onClick={() => onScroll("tokenomics")}>Tokenomics</p>
       </div>
       <div className="headerspecial">
-        <p className="prior">Launch Dapp</p>
+       <a className="prior" href="https://vote-dao-roan.vercel.app/" target="_blank" rel="noopener noreferrer">
+    Launch Dapp
+  </a>
       </div>
       <button
         className="menu-toggle"
