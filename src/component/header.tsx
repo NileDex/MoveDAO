@@ -49,7 +49,12 @@ const Header: React.FC<HeaderProps> = ({ onScroll }) => {
         <p onClick={() => onScroll("working")}>Working</p>
         <p onClick={() => onScroll("team")}>Team</p>
         <p onClick={() => onScroll("tokenomics")}>Tokenomics</p>
-        <p className="prior">Launch Dapp</p>
+        <p className="prior">
+  <a href="https://vote-dao-roan.vercel.app/" target="_blank" rel="noopener noreferrer">
+    Launch Dapp
+  </a>
+</p>
+
       </div>
     </div>
   );
